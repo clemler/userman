@@ -2,9 +2,8 @@
 // File: usermgmt.js
 // Author: Chris Lemler
 //
-// This module encapsulates the functionality of the User Management POC portlet.
+// This is the application controller of the UserMgmt web app.
 //
-
 
 
 // Create the UserMgmt module. We will adopt the new EcmaScript 'strict mode'
