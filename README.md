@@ -17,9 +17,11 @@ order to run the application.
 # Code Structure
 * public/ - contains the static resources served by the server for use in
   the client
-* public/js/usermgmt.js - the primary web client javascript module 
+* public/js/usermgmt.js - the primary web client javascript module
+    * Contains example usage of Backbone.js views/models, and Bootstrap popovers
 * server.js - the node.js server
 * views/ - contains the jade templates used to render the application page
+    * Hint: #foo.bar is translated to `<div id="foo" class="bar">` by Jade
 * views/index.jade - the overall page structure and templates
 * routes/users.js - Express module that handles the routes defined in server.js
 
