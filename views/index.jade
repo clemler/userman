@@ -1,0 +1,58 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    
+    // DIV that contains the tabe that lists the users
+    #users-containers.container
+    
+    //////////////////////////////////////////////////////////
+    // TEMPLATE for the table that displays the list of users
+    //////////////////////////////////////////////////////////
+    script(id="users-template",type="text/x-handlebars-template").
+        <table class="table table-striped table-bordered">
+            <caption>Bedrock Bowling Club</caption>
+            <thead> <th>Name</th> <th>Phone</th> </thead>
+            <tbody>
+                {{#each []}}
+                <tr>
+                <td><span><img id="{{this.uid}}" class="user-details-trigger" width="16px" height="16px" src="/img/eye_inv.png"/></span><span style="margin-left: 8px">{{this.name}}</span></td>
+                <td>{{this.phone}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+    
+    //////////////////////////////////////////////////////////
+    // TEMPLATE for the details of a single user
+    //////////////////////////////////////////////////////////
+    script(id="user-details-template", type="text/x-handlebars-template").
+        <address>
+            <strong>{{name}}</strong> ({{uid}})<br>
+            {{address}}<br>
+            <abbr title="Phone">P:</abbr> {{phone}}<br>
+            <a href="mailto:#">{{email}}</a>
+        </address>
+
+
+block scripts
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+    script(src="/js/bootstrap.js")
+    script(src="/js/bootstrap-editable.js")
+    script(src="/js/underscore.js")
+    script(src="/js/backbone.js")
+    script(src="/js/handlebars.js")
+    script(src="/js/usermgmt.js")
+    | <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    | <!--[if lt IE 9]>
+    | <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    | <![endif]-->
+    
+    script
+        <!-- Once the document and jquery have loaded, render the page-->
+        $(document).ready(function() {
+            console.log("JQuery onLoad is ready...");
+            UserMgmt.init();
+        });
