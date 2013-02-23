@@ -9,8 +9,8 @@ order to run the application.
 
 # Running the Application
 * cd to the userman directory
-* execute 'npm -install'
-* execute 'node server.js'
+* execute `npm -install`
+* execute `node server.js`
 * this will start the server on port 3000
 * launch a browser at http://localhost:3000
 
