@@ -1,6 +1,6 @@
 % UserMgmt Sample node.js application
 % Chris Lemler
-% February 21, 2013
+% April 3, 2013
 
 # Overview
 This application demonstrates the use of a Bootstrap popover in conjunction with
